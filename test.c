@@ -37,32 +37,19 @@ void lea_ecb_enc(		//입력된 평문을 ECB 모드로 암호화
 	const unsigned char* pt,		//암호화하려는 평문
 	unsigned int pt_len,		//평문의 길이 (16의 배수 길이만 입력가능)
 	const LEA_KEY* key		//lea_set_key 함수를 통해 설정된 LEA_KEY 구조체의 주소
-	ct out[]
 );
 
 
-int main(void)
+
+
+ int main(void)
 {
 	int ret;
-	printf("SIMD: %s\n", get_simd_type());
+	printf("SIMD: %s\n", get_simd_type());		// SIMD Type 출력
 	if (ret = lea_mmt_ecb_test())	printf("LEA ECB FAIL(%d)\n", ret);
-	if (ret = lea_mmt_cbc_test())	printf("LEA CBC FAIL(%d)\n", ret);
-	if (ret = lea_mmt_ctr_test())	printf("LEA CTR FAIL(%d)\n", ret);
-	if (ret = lea_mmt_ofb_test())	printf("LEA OFB FAIL(%d)\n", ret);
-	if (ret = lea_mmt_cfb_test())	printf("LEA CFB FAIL(%d)\n", ret);
-	if (ret = lea_cmac_g_test())		printf("LEA CMAC FAIL(%d)\n", ret);
-	if (ret = lea_ccm_ge_test())		printf("LEA CCM FAIL(%d)\n", ret);
-	if (ret = lea_gcm_ae_test())		printf("LEA GCM FAIL(%d)\n", ret);
 
 	lea_key_benchmark();
 	lea_ecb_benchmark();
-	lea_cbc_benchmark();
-	lea_ctr_benchmark();
-	lea_ofb_benchmark();
-	lea_cfb_benchmark();
-	lea_cmac_benchmark();
-	lea_ccm_benchmark();
-	lea_gcm_benchmark();
 
 	return 0;
 }
