@@ -44,12 +44,13 @@ void lea_ecb_enc(		//입력된 평문을 ECB 모드로 암호화
 
  int main(void)
 {
-	int ret;
+	int ret;		//RET이란?  ESP 레지스터가 가리키는 값을 EIP 레지스터에 저장 / RETN 이라고도 씀
 	printf("SIMD: %s\n", get_simd_type());		// SIMD Type 출력
 	if (ret = lea_mmt_ecb_test())	printf("LEA ECB FAIL(%d)\n", ret);
 
 	lea_key_benchmark();
 	lea_ecb_benchmark();
-
+	
 	return 0;
 }
+
