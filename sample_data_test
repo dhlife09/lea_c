@@ -1,0 +1,79 @@
+SIMD: avx2,sse2,pclmul
+LEA MMT ECB : success
+LEA MMT CBC : success
+LEA MMT CTR : success
+LEA MMT OFB : success
+LEA MMT CFB : success
+LEA CMAC G : success
+LEA CCM GE : success
+LEA GCM AE : success
+***** lea_key_benchmark *****
+- Encryption Key schedule Speed
+[128]   99.31 cycles/byte
+[192]  122.21 cycles/byte
+[256]   86.69 cycles/byte
+- Decryption Key schedule Speed
+[128]  101.44 cycles/byte
+[192]  140.79 cycles/byte
+[256]   87.75 cycles/byte
+
+***** lea_ecb_benchmark *****
+- Encryption Speed
+[128]    5.24 cycles/byte
+[192]    5.94 cycles/byte
+[256]    6.65 cycles/byte
+- Decryption Speed
+[128]    6.38 cycles/byte
+[192]    7.25 cycles/byte
+[256]    8.09 cycles/byte
+
+***** lea_cbc_benchmark *****
+- Encryption Speed
+[128]   60.88 cycles/byte
+[192]   72.01 cycles/byte
+[256]   82.89 cycles/byte
+- Decryption Speed
+[128]    8.48 cycles/byte
+[192]    9.35 cycles/byte
+[256]   10.22 cycles/byte
+
+***** lea_ctr_benchmark *****
+- Encryption Speed
+[128]   14.98 cycles/byte
+[192]   15.70 cycles/byte
+[256]   16.37 cycles/byte
+- Decryption Speed
+[128]   14.96 cycles/byte
+[192]   15.69 cycles/byte
+[256]   16.33 cycles/byte
+
+***** lea_ofb_benchmark *****
+- Encryption Speed
+[128]   60.38 cycles/byte
+[192]   71.64 cycles/byte
+[256]   83.06 cycles/byte
+- Decryption Speed
+[128]   60.47 cycles/byte
+[192]   71.53 cycles/byte
+[256]   82.82 cycles/byte
+
+***** lea_cfb_benchmark *****
+- Encryption Speed
+[128]   60.35 cycles/byte
+[192]   71.43 cycles/byte
+[256]   82.96 cycles/byte
+- Decryption Speed
+[128]   60.47 cycles/byte
+[192]   73.29 cycles/byte
+[256]   82.78 cycles/byte
+
+***** lea_cmac_benchmark *****
+- Encryption Speed
+[128]   60.11 cycles/byte
+[192]   70.91 cycles/byte
+[256]   82.60 cycles/byte
+
+***** lea_ccm_benchmark *****
+- Encryption Speed
+[128]   81.92 cycles/byte
+[192]   94.13 cycles/byte
