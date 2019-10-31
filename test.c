@@ -23,7 +23,7 @@ LEA_KEY 구조체는 마스터키 길이 정보와 라운드 키를 포함한다
 */
 
 void lea_set_key(	// LEA 라운드 키 생성
-	LEA_KEY* key,		//LEA 라운드 키와 라운드 수 정보를 가진 LEA_KEY 구조체의 구조
+	LEA_KEY* key,		//LEA 라운드 키와 라운드 수 정보를 가진 LEA_KEY 구조체의 주소
 	const unsigned char* mk,	// 마스터 키
 	unsigned int mk_len		// 마스터키의 길이 (입력 값으로 16, 24, 32만 가능)
 );
@@ -32,7 +32,7 @@ void lea_set_key(	// LEA 라운드 키 생성
 입력된 평문을 ECB 모드를 이용해 암호화한다.
 */
 
-void lea_ecb_enc(		//입력된 평문을 ECB 모드로 암호화d
+void lea_ecb_enc(		//입력된 평문을 ECB 모드로 암호화
 	unsigned char* ct,		//암호문
 	const unsigned char* pt,		//암호화하려는 평문
 	unsigned int pt_len,		//평문의 길이 (16의 배수 길이만 입력가능)
