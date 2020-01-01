@@ -5,3 +5,7 @@
 
 
 ECB 암호화/복호화 실험실!(?)
+
+---
+해당 프로젝트는 종료되었습니다.
+This project is closed.
